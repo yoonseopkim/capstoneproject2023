@@ -1,0 +1,10 @@
+runtime: nodejs
+env: flex
+
+manual_scaling:
+  instances: 1
+resources:
+  cpu: 1 
+  memory_gb: 0.5
+  disk_size_gb: 10
+  # cpu 2개에 메모리 4기가는 되어야 사이트 운영할만 함 위에 두줄만 입력하면 아라서 사양 세팅해줌
