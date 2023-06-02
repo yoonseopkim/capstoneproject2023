@@ -3,16 +3,18 @@ import { Nav, Navbar, Container } from "react-bootstrap";
 import { FaUserCircle } from "react-icons/fa";
 import { BsPeopleFill } from "react-icons/bs";
 import { GiOpenBook, GiPadlock, GiPadlockOpen } from "react-icons/gi";
+import { useNavigate } from 'react-router-dom';
 
 function Navbars () {
 
+  const navigate = useNavigate();
   const userId = localStorage.getItem('id');
 
   const handleLogout = () => {
     let result = window.confirm(`'${userId}'님 정말 로그아웃 하시겠습니까?`);
     if(result){
     localStorage.clear('id');
-    window.location.replace('http://localhost:3000/');
+    navigate('/');
     }
   }
 

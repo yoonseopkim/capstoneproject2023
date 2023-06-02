@@ -29,7 +29,7 @@ function Login() {
         if (isValidUser) {
           setIsLoggedIn(true); // 로그인 상태 업데이트
           localStorage.setItem('id', inputId);
-          window.location.replace('http://localhost:3000/');
+          navigate('/');
         } else if (inputId === '' && inputPw === '') {
           alert('아이디와 비밀번호를 입력하세요.');
         } else {

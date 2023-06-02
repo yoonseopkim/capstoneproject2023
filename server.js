@@ -73,12 +73,12 @@ app.post('/add', function(요청, 응답){
   });
 
 //리액트 관련
-app.use(express.static(path.join(__dirname, 'react-project/build')));
+app.use(express.static(path.join(__dirname, 'react-project1/build')));
 
 app.get('/', function (요청, 응답) {
-  응답.sendFile(path.join(__dirname, '/react-project/build/index.html'));
+  응답.sendFile(path.join(__dirname, '/react-project1/build/index.html'));
 });
 
 app.get('*', function (요청, 응답) {
-  응답.sendFile(path.join(__dirname, '/react-project/build/index.html'));
+  응답.sendFile(path.join(__dirname, '/react-project1/build/index.html'));
 });
